@@ -1,10 +1,10 @@
-const scrollable = document.querySelector('.scrollable');
-const content = document.querySelector('.content');
+// const scrollable = document.querySelector('.scrollable');
+// const content = document.querySelector('.content');
 const imgSections = [...document.querySelectorAll('.img-section')];
-const images= [...document.querySelectorAll('.img')];
-images.forEach((image, idx) => {
-    image.style.backgroundImage = `url(./images/${idx + 1}.jpeg)`
-})
+// const images= [...document.querySelectorAll('.img')];
+// images.forEach((image, idx) => {
+//     image.style.backgroundImage = `url(./images/${idx + 1}.jpeg)`
+// })
 
 
 
@@ -29,11 +29,7 @@ const menuTog = document.querySelector('.menu-tog');
 const menu = document.querySelector('.menu');
 const menuWraps = [...document.querySelectorAll('.menu-wrap')];
 
-// Set scroll dimensions
-function init(){
-    document.body.style.height = `${content.getBoundingClientRect().height}px`;
-}
-window.addEventListener('resize', init);
+
 menuTog.addEventListener('click', toggleMenu)
 
 function displayWraps(){
@@ -88,42 +84,4 @@ function toggleWrap(wrap, active){
     })
 }
 
-let target = 1;
-let reverse = false;
-
-document.addEventListener('click', () => reverse = !reverse)
-
-function scroll(){
-    target = window.scrollY;
-
-    if(!isMobile){
-        if(target <= 0){
-            target = (content.offsetHeight / 2) - 1;
-            window.scrollTo(0, target);
-        }else if( target >= content.offsetHeight / 2){
-            target = 1;
-            window.scrollTo(0, target);
-        }
-    }
-
-    if(reverse){
-        target --
-    }else{
-        target++
-    }
-    window.scrollTo(0, target)
-    scrollable.style.transform = `translateY(-${target}px)`;
-    requestAnimationFrame(scroll)
-}
-
-
 displayWraps()
-init()
-
-document.addEventListener('DOMContentLoaded', () => {
-    
-    setTimeout(() => {
-        window.scrollTo(0, 1);
-    }, 200)
-    scroll()
-})
