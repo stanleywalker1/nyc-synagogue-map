@@ -95,9 +95,9 @@
     mapboxgl.accessToken = 'pk.eyJ1Ijoic3Rhbm5vc3R1ZGlvIiwiYSI6ImNsYmhkZXNnMTBheWgzdmxjb2xrb3RoOHEifQ.RjR8rIS6weUTCAhnoEPoIQ'; //Mapbox token 
     var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: 'mapbox://styles/mapbox/streets-v11', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
-      center: [-122.411, 37.785], // starting position [lng, lat]
-      zoom: 10,// starting zoom
+      style: 'mapbox://styles/stannostudio/clbjw96eh004815nvad1l9qga', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
+      center: [-73.989308, 40.741895], // starting position [lng, lat]
+      zoom: 7,// starting zoom
       transformRequest: transformRequest
     });
 
@@ -130,7 +130,8 @@
               },
               'paint': {
                 'circle-radius': 5,
-                'circle-color': "purple"
+                'circle-color': "white",
+                'circle-opacity': 0.1
               }
             });
 
