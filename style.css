@@ -130,7 +130,7 @@ h1 {
   position: absolute;
   bottom: 20%;
   left: 2%;
-  height: 200px;
+  height: 350px;
   color: #ffffff;
 }
 
@@ -138,7 +138,7 @@ h1 {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   color: #ffffff;
 }
 
@@ -223,9 +223,10 @@ main {
   border: 1px solid #ccc;
   padding: 5px 10px;
   margin: 2px;
-  font-size: 14px;
+  /* font-size: 14px; */
   text-align: center;
   display:inline-block;
+  font-family: 'Montserrat';font-size: 10px;
 }
 
 .map-legend span:hover {
@@ -234,11 +235,28 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
+  .map-legend {
+    display: flex;
+    max-width: 100%;
+    max-height: 80px;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
   .map-legend span {
-    width: 23%;
+    height: 20px;
     font-size: 10px;
     padding: 3px 6px;
     text-align: center;
     display:inline-block;
+    overflow-wrap: break-word;
+    
   }
+}
+
+p {
+  font-family: 'Montserrat';font-size: 13px;
 }
