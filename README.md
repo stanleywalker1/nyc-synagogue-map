@@ -9,3 +9,4 @@ The website displays 79 synagogues in New York City that have been repurposed, s
 ### Tools
 * Mapbox API
 * [The Lost Synagogues of Manhattan by Ellen Levitt](https://www.avotaynu.com/books/LostSynagoguesManhattan.html)
+* This data is sourced from 2013 - please feel free to contact me at stannostudio@gmail.com to update the map
